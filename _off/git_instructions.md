@@ -16,9 +16,10 @@ eles fiquem hospedados na minha máquina. Penso no seu funcionamento igual ao Go
 # Comando para iniciar (criar) o git na pasta do projeto.
     git init
 
-# Comando para adicionar arquivos no stage de mudanças. 
+# Comando para adicionar e remover arquivos no stage de mudanças. 
     git add nome_arquivo.
     git add . --> para adicionar todos os arquivos de uma vez só.
+    git reset nome_do_arquivo ----> para remover um arquivo específico do stage de mudanças.
 
 # Comando para fazer o commit.
     git commit -m "título do commit"
