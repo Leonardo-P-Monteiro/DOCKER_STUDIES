@@ -110,4 +110,5 @@ Quando essas modificações estão no ponto de serem incorporadas ao projeto pri
 
 # (Re)Definir usuário e e-mail registrados nos commits.
 git config --global user.name "Seu Nome Completo"
+
 git config --global user.email "seu_email@example.com"
