@@ -108,8 +108,34 @@ comando push e fazer upload, pois sempre que queremos upar nossas imagens e cont
 de imagens é preciso inserir nosso nome de usuário do Docker Hub antes do nome do projeto
 para que ele seja enviado para o repositório. 
 
-# COMANDO PARA CRIAR UM ARQUIVO DOCKER COMPOSE.
+# COMANDO PARA ENVIAR A IMAGEM PARA O DOCKER HUB.
 
 `````
+docker push my-username/my-image
+`````
 
+
+# COMANDO PARA VER O HISTÓRICO DA IMAGEM.
+
+
+`````
+docker image history mobywhale/concepts-build-image-demo
+`````
+- Vai exibir um histórico de atualizações e versões da imagem. Como 
+se fosse a exibição de todas as versões que ela teve.
+
+`````
+IMAGE          CREATED         CREATED BY                                      SIZE      COMMENT
+f279389d5f01   8 seconds ago   CMD ["node" "./src/index.js"]                   0B        buildkit.dockerfile.v0
+<missing>      8 seconds ago   EXPOSE map[3000/tcp:{}]                         0B        buildkit.dockerfile.v0 
+<missing>      8 seconds ago   WORKDIR /app                                    8.19kB    buildkit.dockerfile.v0
+<missing>      4 days ago      /bin/sh -c #(nop)  CMD ["node"]                 0B
+<missing>      4 days ago      /bin/sh -c #(nop)  ENTRYPOINT ["docker-entryâ¦   0B
+<missing>      4 days ago      /bin/sh -c #(nop) COPY file:4d192565a7220e13â¦   20.5kB
+<missing>      4 days ago      /bin/sh -c apk add --no-cache --virtual .buiâ¦   7.92MB
+<missing>      4 days ago      /bin/sh -c #(nop)  ENV YARN_VERSION=1.22.19     0B
+<missing>      4 days ago      /bin/sh -c addgroup -g 1000 node     && adduâ¦   126MB
+<missing>      4 days ago      /bin/sh -c #(nop)  ENV NODE_VERSION=20.12.0     0B
+<missing>      2 months ago    /bin/sh -c #(nop)  CMD ["/bin/sh"]              0B
+<missing>      2 months ago    /bin/sh -c #(nop) ADD file:d0764a717d1e9d0afâ¦   8.42MB
 `````
